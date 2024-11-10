@@ -10,7 +10,6 @@ const Navbar = () => {
       <div className="navLeft">
         <span>Pizzería Mamma Mía!</span>
         
-        {/* Link to Home */}
         <Link to="/">
           <button>🍕 Home</button>
         </Link>
