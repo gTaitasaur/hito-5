@@ -3,7 +3,7 @@ import './Navbar.css';
 
 const Navbar = () => {
   const total = 25000;
-  const token = false;
+  const token = true;
 
   return (
     <nav className="navDiv">
@@ -14,31 +14,21 @@ const Navbar = () => {
         <Link to="/">
           <button>🍕 Home</button>
         </Link>
-        
-        {token ? (
-          <>
-            {/* Link to Profile if logged in */}
-            <Link to="/profile">
-              <button>🔓 Profile</button>
-            </Link>
-            <button>🔒 Logout</button> {/* Placeholder for Logout functionality */}
-          </>
-        ) : (
-          <>
-            {/* Link to Login if not logged in */}
-            <Link to="/login">
-              <button>🔐 Login</button>
-            </Link>
-            {/* Link to Register if not logged in */}
-            <Link to="/register">
-              <button>🔐 Register</button>
-            </Link>
-          </>
-        )}
+        <Link to="/profile">
+          <button>🔓 Profile</button>
+        </Link>
+        <Link to="/login">
+          <button>🔐 Login</button>
+        </Link>
+        <Link to="/404">
+          <button>🔒 Logout</button>
+        </Link>
+        <Link to="/register">
+          <button>🔐 Register</button>
+        </Link>
       </div>
       
       <div className="navRight">
-        {/* Link to Cart with total amount */}
         <Link to="/cart">
           <button className="total">🛒 Total: ${total.toLocaleString()}</button>
         </Link>
