@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import CardPizza from "./CardPizza";
+import CardPizza from "../components/CardPizza";
 
-const Pizza = () => {
+const Home = () => {
   const [pizzas, setPizzas] = useState([]);
 
   useEffect(() => {
@@ -13,11 +13,11 @@ const Pizza = () => {
 
   return (
     <div className="PizzaDiv">
-      {pizzas.map((pizza) => (
+      {pizzas.map(pizza => (
         <CardPizza key={pizza.id} pizza={pizza} />
       ))}
     </div>
   );
 };
 
-export default Pizza;
+export default Home;
